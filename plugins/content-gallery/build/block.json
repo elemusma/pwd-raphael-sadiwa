@@ -1,0 +1,153 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/content-gallery",
+  "version": "0.1.0",
+  "title": "Content Gallery",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+    "section_style": {
+      "type": "string",
+      "default": "padding:50px 0;"
+    },
+    "section_class": {
+      "type": "string",
+      "default": "position-relative"
+    },
+    "section_id": {
+      "type": "string",
+      "default": ""
+    },
+    "section_image": {
+      "type": "string",
+      "default": null
+    },
+    "section_image_class": {
+      "type": "string",
+      "default": "w-100 h-100 position-absolute bg-img"
+    },
+    "section_image_style": {
+      "type": "string",
+      "default": "top:0;left:0;object-fit:cover;pointer-events:none;"
+    },
+    "section_image_title": {
+      "type": "string",
+      "default": null
+    },
+    "section_image_alt": {
+      "type": "string",
+      "default": null
+    },
+    "section_block": {
+      "type": "string",
+      "default": ""
+    },
+    "container_style": {
+      "type": "string",
+      "default": ""
+    },
+    "container_class": {
+      "type": "string",
+      "default": "container"
+    },
+    "container_id": {
+      "type": "string",
+      "default": ""
+    },
+    "row_style": {
+      "type": "string",
+      "default": ""
+    },
+    "row_class": {
+      "type": "string",
+      "default": "row justify-content-center"
+    },
+    "row_id": {
+      "type": "string",
+      "default": ""
+    },
+    "col_style": {
+      "type": "string",
+      "default": ""
+    },
+    "col_class": {
+      "type": "string",
+      "default": "col-12"
+    },
+    "col_id": {
+      "type": "string",
+      "default": ""
+    },
+    "col_image": {
+      "type": "string",
+      "default": ""
+    },
+    "col_image_style": {
+      "type": "string",
+      "default": ""
+    },
+    "col_image_class": {
+      "type": "string",
+      "default": "col-12 row"
+    },
+    "col_image_id": {
+      "type": "string",
+      "default": ""
+    },
+    "image_style": {
+      "type": "string",
+      "default": ""
+    },
+    "image_class": {
+      "type": "string",
+      "default": ""
+    },
+    "image_id": {
+      "type": "string",
+      "default": ""
+    },
+    "gallery_images": {
+      "type": "array",
+      "default": []
+    },
+    "gallery_image_count": {
+      "type": "number",
+      "default": "6"
+    },
+    "gallery_columns": {
+      "type": "string",
+      "default": "col-lg-4 col-md-6"
+    },
+    "gallery_captions_yes_no": {
+      "type": "string",
+      "default": "no"
+    },
+    "gallery_columns_style": {
+      "type": "string",
+      "default": "padding:5px;"
+    },
+    "gallery_images_lightbox": {
+      "type": "string",
+      "default": "gallery-lightbox"
+    },
+    "gallery_link_style": {
+      "type": "string",
+      "default": "overflow:hidden;"
+    },
+    "gallery_link_class": {
+      "type": "string",
+      "default": "d-block"
+    }
+  },
+  "textdomain": "content-gallery",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

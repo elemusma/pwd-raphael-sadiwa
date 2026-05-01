@@ -1,0 +1,47 @@
+.logged-in header.position-fixed {
+    margin-top: 32px;
+}
+
+@media only screen and (max-width:767px) {
+    .logged-in .secondary-nav {
+        margin-top: 43px;
+    }
+}
+
+@media only screen and (min-width:1025px) {
+	.hero {
+    	min-height: calc(100vh - 420px);
+	}
+}
+
+@media only screen and (max-width:1024px) {
+	.hero {
+    min-height: calc(100vh - 920px);
+}
+}
+
+@media only screen and (max-width:767px) {
+.hero {
+    min-height: calc(100vh - 480px);
+}
+}
+
+@media only screen and (max-width:767px){
+    .hero {
+        padding:15px 0px 40px!important;
+    }
+    .hero .row {
+        flex-direction: column-reverse;
+    }
+}
+
+.img-hero {
+    min-height: 300px;
+    height: 85vh;
+    object-fit: cover;
+}
+
+body:not(.home) .img-hero {
+    min-height: 200px;
+    height: 30vh;
+}

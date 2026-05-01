@@ -1,0 +1,147 @@
+/* Start of services home */
+
+.services .first-layer {
+  position:absolute;
+  height:50%;
+  border-radius:25px;
+border:1px solid white;
+background:rgba(255,255,255,.15);
+width:90%;
+top:0%;
+z-index:-1;
+left:calc(5% - 4px);
+}
+
+.services .second-layer {
+  position:absolute;
+  height:50%;
+  border-radius:25px;
+  border: 1px solid white;
+    background: rgba(255, 255, 255, .15);
+    width: 75%;
+    top: 20%;
+    z-index: -1;
+    left: calc(12.5% - 4px);
+}
+
+.services .third-layer {
+  position:absolute;
+  height:50%;
+  border-radius:25px;
+  border:1px solid white;
+    background: rgba(255, 255, 255, .15);
+    width: 80%;
+    top: 22%;
+    z-index: -1;
+    left: calc(10% - 4px);
+}
+
+.services .svg-icon {
+  position:absolute;
+  width: 45px;
+    height: 45px;
+    z-index: 1;
+    bottom: 25px;
+    right: 20px;
+}
+
+.services-col {
+  position: relative;
+  overflow: hidden;
+  cursor:pointer;
+display: block;
+}
+
+ .services-col h2,
+ .services-col h3 {
+  margin: 0px 0px 20px;
+ }
+.services-col .position-relative {
+  padding-left:25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  text-shadow:var(--text-shadow);
+  transition: transform 0.25s ease-in-out;
+}
+
+.services-col a {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: end;
+  text-decoration: none;
+  color: inherit;
+  z-index: 3; /* above overlays, unless you want overlay to block clicks */
+}
+
+.services-col:hover .position-relative {
+    /* color:var(--accent-primary); */
+  transform: translateY(-10px);
+}
+
+.services-col img {
+  transition: transform 0.25s ease-in-out;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hover-col img {
+  transition:all .25s ease-in-out;
+}
+
+/* Zoom image on hover */
+.services-col:hover img,
+.hover-col:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay container */
+.services-col-overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Default white gradient */
+.services-col-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  /* background: linear-gradient(0deg, rgba(144, 5, 26, 0.5) 0%, rgba(47, 47, 47, 0) 100%); */
+  background: #141414;
+  background: linear-gradient(0deg, rgba(20, 20, 20, 1) 0%, rgba(255, 255, 255, 0) 75%);
+  /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(47, 47, 47, 0) 100%); */
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Red hover gradient */
+.services-col-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(47, 47, 47, 0) 100%); */
+  background: linear-gradient(0deg, rgba(var(--accent-primary-rgba), 0.5) 0%, rgba(47, 47, 47, 0) 100%);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  z-index: 2;
+}
+
+/* On hover: fade out white, fade in red */
+.services-col:hover .services-col-overlay::before {
+  opacity: 0;
+}
+
+.services-col:hover .services-col-overlay::after {
+  opacity: 1;
+}
+
+/* End of services home */

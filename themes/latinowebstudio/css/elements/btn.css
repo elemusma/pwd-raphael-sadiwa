@@ -1,0 +1,81 @@
+.btn-main,
+.btn-main a,
+.wp-block-file__button {
+    background: var(--accent-primary);
+    padding: 5px 15px !important;
+    transition: all .25s ease-in-out !important;
+	box-shadow:none !important;
+    display: inline-block;
+    text-decoration: none;
+    color: black!important;
+    text-shadow:none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    border:1px solid var(--accent-primary);
+    font-family: 'poppinssemibold';
+    margin: 10px;
+    cursor:pointer;
+}
+
+.btn-main:hover,
+.wp-block-file__button:hover {
+    background: var(--accent-primary-hover);
+    border-color:var(--accent-primary-hover);
+    /* color:white !important; */
+    text-decoration: none;
+}
+
+.bg-accent .btn-main {
+    background: black;
+    color: white!important;
+    border:1px solid var(--accent-tertiary);
+}
+.bg-accent .btn-main:hover {
+    background: var(--accent-secondary);
+    color: black!important;
+    border:1px solid var(--accent-tertiary);
+}
+
+.btn-main.white, .btn-main.white a {
+    background: white;
+    color: black!important;
+    border:1px solid black;
+}
+
+.btn-main.white:hover {
+	background: var(--accent-secondary);
+    color: white !important;
+    border-color: white;
+    text-decoration: none;
+}
+
+.btn-main.outline {
+    border: 1px solid var(--accent-secondary);
+    color:var(--accent-secondary) !important;
+    background:transparent;
+}
+
+.btn-main.outline:hover {
+    background: var(--accent-secondary);
+    color:white !important;
+}
+.btn-main.outline.accent {
+    border-color: var(--accent-primary);
+    color:var(--accent-primary);
+    background:transparent;
+}
+
+.btn-main.outline.accent:hover {
+    background: var(--accent-secondary);
+    color:white;
+}
+.btn-main.outline.white {
+    border-color: white;
+    color:white;
+    background:transparent;
+}
+
+.btn-main.outline.white:hover {
+    background: white;
+    color:black;
+}

@@ -1,0 +1,108 @@
+.checkmark li {
+    font-size: 1.4rem;
+    padding: 15px 0;
+    position:relative;
+    list-style: none;
+}
+
+.checkmark li:before {
+    content: "";
+    background: url('/wp-content/uploads/Arrow-Icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    left: -35px;
+}
+
+/* how it works */
+.works-step {
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.steps h3,
+.steps p {
+    margin:0px;
+}
+/* how it works */
+
+/* stats */
+.stats {
+padding:15px 0px;
+}
+
+.stats .col {
+text-align:center;
+}
+.stats h3 {
+/* color: white; */
+    font-size: 2rem;
+    margin-bottom: 0;
+    /* opacity: .5; */
+margin-top: 0;
+    margin-bottom: -10px;
+}
+.stats p {
+line-height:1;
+/* font-size:var(--small); */
+/* color:white; */
+}
+/* stats */
+
+/* how it works */
+.overlay-step {
+    background: #000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 50%);
+    position:absolute;
+    width:100%;
+    height:80%;
+    bottom:0;
+    left:0;
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
+}
+.how-to-work img {
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+    border-bottom-left-radius:35px;
+    border-bottom-right-radius:35px;
+    box-shadow: 0px 0px 25px rgba(var(--accent-primary-rgba));
+    display:block;
+    object-fit:cover;
+    width:100%;
+    height:350px;
+}
+.how-to-work-steps {
+    bottom:25px;
+    left:25px;
+    position:absolute;
+    display:flex;
+    align-items: baseline;
+}
+.how-to-work-steps .step {
+    height: 25px;
+    min-width:30px;
+    width: 30px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    line-height: 0;
+    padding-top: 5px;
+}
+
+.how-to-work-steps .label {
+font-size:21px;
+line-height: 1;
+}
+/* how it works */

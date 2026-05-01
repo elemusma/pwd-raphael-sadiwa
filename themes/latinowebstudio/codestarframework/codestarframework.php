@@ -1,0 +1,204 @@
+<?php
+
+// Control core classes for avoid errors
+if( class_exists( 'CSF' ) ) {
+
+//
+// Set a unique slug-like ID
+$prefix = 'my_framework';
+
+$post_prefix = 'my_post_framework';
+// Create a metabox
+CSF::createMetabox( $post_prefix, array(
+    'title'     => 'My Post Options',
+    'post_type' => 'post',
+    'fields'    => array(
+        array(
+            'id'    => 'my_text_field',
+            'type'  => 'text',
+            'title' => 'My Text Field',
+        ),
+    ),
+    'callback'  => 'my_metabox_callback_function',
+) );
+
+// Define the callback function
+function my_metabox_callback_function() {
+    echo 'This is where you can add additional HTML content for the metabox if needed.';
+}
+
+// Create options
+CSF::createOptions( $prefix, array(
+	'menu_title' => 'Global Settings',
+	'menu_slug'  => 'my-framework',
+) );
+
+//
+// Create a section
+CSF::createSection( $prefix, array(
+	'title'  => 'Logo',
+	'fields' => array(
+
+	// Media
+	array(
+		'id'    => 'img-logo',
+		'type'  => 'media',
+		'title' => 'Main Logo',
+		),
+	// Code Editor
+	array(
+		'id'    => 'logo-svg',
+		'type'  => 'code_editor',
+		'title' => 'SVG for Logo',
+		'sanitize' => false,
+	  ),
+
+	)
+) );
+
+// Create a section
+CSF::createSection( $prefix, array(
+	'title'  => 'About',
+	'fields' => array(
+
+	  
+	  // A textarea field
+      array(
+        'id'    => 'company-about',
+        'type'  => 'textarea',
+        'title' => 'Description about the company',
+      ),
+	  
+	  // A textarea field
+      array(
+        'id'    => 'expert-witness-blurb',
+        'type'  => 'textarea',
+        'title' => 'Expert Witness And Analytic Services',
+      ),
+
+	  array(
+		'id'      => 'global-phone',
+		'type'    => 'text',
+		'title'   => 'Phone',
+		'default' => '(555) 555-5555'
+	  ),
+
+	  array(
+		'id'      => 'email-address',
+		'type'    => 'text',
+		'title'   => 'Email',
+		'default' => 'info@domain.com'
+	  ),
+
+	  array(
+		'id'      => 'expert-name',
+		'type'    => 'text',
+		'title'   => 'Expert Name',
+		'default' => 'John Doe'
+	  ),
+	  array(
+		'id'      => 'cv-download-link',
+		'type'    => 'text',
+		'title'   => 'CV Download Link',
+		'default' => '#'
+	  ),
+	  
+	  
+
+	)
+) );
+// Create a section
+CSF::createSection( $prefix, array(
+	'title'  => 'Header, Body & Footer Code',
+	'fields' => array(
+
+	  array(
+		'id'       => 'code-header',
+		'type'     => 'code_editor',
+		'title'    => 'Code: Header',
+		'sanitize' => false,
+	  ),
+	  array(
+		'id'       => 'code-body',
+		'type'     => 'code_editor',
+		'title'    => 'Code: Body',
+		'sanitize' => false,
+	  ),
+	  array(
+		'id'       => 'code-footer',
+		'type'     => 'code_editor',
+		'title'    => 'Code: Footer',
+		'sanitize' => false,
+	  ),
+	  
+
+	)
+) );
+
+}
+
+
+function global_function() {
+    global $options;
+    $options = get_option( 'my_framework' ); // unique id of the framework
+    return $options;
+}
+
+function logoImg() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['img-logo'];
+}
+function logoSVG() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['logo-svg'];
+}
+function codeHeader() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['code-header'];
+}
+function codeBody() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['code-body'];
+}
+function codeFooter() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['code-footer'];
+}
+function companyAbout() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['company-about'];
+}
+function globalPhone() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['global-phone'];
+}
+function emailAddress() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['email-address'];
+}
+function expertName() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['expert-name'];
+}
+add_shortcode('expert_name', 'expertName');
+function cvDownloadLink() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['cv-download-link'];
+}
+function expertWitness() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['expert-witness-blurb'];
+}
+
+?>

@@ -1,0 +1,127 @@
+.single-post .col-lg-9 p a, 
+.page-template-areas-of-expertise .col-lg-9 p a, 
+#previous a, 
+#next a, 
+.card ul li a,
+.text-link,
+.case-studies a,
+.publications a {
+	color: unset;
+	padding: 0px 5px;
+	box-shadow: inset 0 -5px 0 0 var(--accent-primary);
+    transition: all .25s ease-in-out;
+}
+
+.single-post .col-lg-9 p a:hover, 
+.page-template-areas-of-expertise .col-lg-9 p a:hover, 
+#previous a:hover, 
+#next a:hover, 
+.card ul li a:hover,
+.text-link:hover,
+.case-studies a:hover,
+.publications a:hover {
+	color:black;
+	box-shadow: inset 0 -55px 0 0 var(--accent-primary);
+}
+/* queries */
+.blog-content {
+  bottom: 0;
+  z-index: 1;
+}
+
+.blog-content p a {
+  color: white;
+}
+
+/*  */
+.col-blog img.blog-img {
+  height: 150px;
+  object-fit: contain;
+}
+
+.blog-posts-meta a {
+  font-family: unset;
+}
+
+/* comments */
+.comment-form-comment label {
+  display: block;
+}
+
+textarea#comment {
+  width: 100%;
+}
+
+input#submit,
+input#searchsubmit {
+  background: var(--accent-primary);
+  border: none;
+  padding: 10px 30px;
+  color: white;
+  cursor: pointer;
+  cursor: pointer;
+  box-shadow: none !important;
+  width: 100%;
+}
+
+input#searchsubmit:hover {
+  background: var(--accent-secondary);
+}
+
+input#s {
+  width: 100%;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+}
+
+/* pagination */
+span.page-numbers.current {
+  background: white !important;
+  border: 2px solid var(--accent-primary);
+  color: var(--accent-primary) !important;
+}
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.page-numbers {
+    background: var(--accent-secondary);
+	border:2px solid var(--accent-secondary);
+    color: white;
+    min-height: 25px;
+    min-width: 25px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin: 2px;
+    padding: 4px 15px 0px;
+    text-decoration: none;
+    transition: all .25s ease-in-out;
+}
+
+.page-numbers:hover {
+  color: var(--accent-secondary) !important;
+  background: white !important;
+}
+
+ul.page-numbers {
+  border: none !important;
+}
+
+.woocommerce nav.woocommerce-pagination ul li {
+  border: none;
+}
+
+/* new layout with sidebar */
+.single-post .col-lg-9 section#contact {
+    display: none;
+}
+.single-post section .col-lg-9 .col-lg-9 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.single-post header~section section {
+    padding: 0 !important;
+}

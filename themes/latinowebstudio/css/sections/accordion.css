@@ -1,0 +1,67 @@
+.accordion {
+    cursor: pointer;
+    padding:0px;
+}
+.accordion > div{
+    background: var(--accent-secondary);
+    padding: 20px 40px 20px 20px;
+    margin-bottom: 10px;
+    position:relative;
+    border-radius: 45px;
+    /* color:white; */
+}
+
+/* span inside accordion (from @if block) */
+.accordion span {
+    font-family: 'poppinsbold';
+    /* color: white; */
+}
+
+/* chevron when accordion is open */
+.accordion.open .chevron {
+    transform: rotate(90deg);
+}
+
+/* chevron default */
+.accordion .chevron {
+    width: 30px;
+    height: 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 15px;
+    border-radius: 50%;
+    transition: all .25s ease-in-out;
+}
+
+.chevron svg {
+    width: 15px;
+    height: 15px;
+}
+
+/* accordion content hidden */
+.accordion .accordion-content {
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: all .5s ease;
+}
+
+/* first accordion */
+/* .accordion:first-child {
+    padding: 0px 0px 25px;
+}
+
+.accordion:first-child .chevron {
+    top: 5px;
+} */
+
+/* all except first accordion */
+/* .accordion:not(:first-child) {
+    padding: 25px 0px;
+}
+
+.accordion:not(:first-child) .chevron {
+    top: 25px;
+} */

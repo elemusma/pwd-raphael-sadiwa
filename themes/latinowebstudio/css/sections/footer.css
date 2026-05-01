@@ -1,0 +1,21 @@
+footer ul.menu li, 
+footer ul.menu>li>a {
+    padding: 10px 0px;
+    color:black;
+}
+
+#servicesMenuModal ul.menu>li>a {
+color:black;
+}
+#servicesMenuModal ul.menu>li>a:hover {
+color:var(--accent-primary);
+}
+@media only screen and (min-width: 1200px) {
+    footer ul.menu li a {
+        border: none;
+        padding-left: 0;
+    }
+    footer ul.menu li:first-child {
+    padding-top: 0;
+}
+}

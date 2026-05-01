@@ -1,0 +1,23 @@
+div#mobileMenu .modal-content {
+    width: 80%;
+    margin-left: 0;
+    margin-top: 0px;
+    margin-bottom: 0;
+    border-radius: 0;
+    min-height: 95%;
+}
+
+@media only screen and (max-width:1199px) {
+    .mobile-menu .modal-content-custom {
+        transform: translate(-110%, 0px);
+		transition: transform 0.35s ease-in-out;
+    }
+    .mobile-menu.active .modal-content-custom {
+        transform: translate(0px, 0px);
+    }
+}
+
+
+/* 	a.btn-main.desktop-hidden {
+    	padding: 5px 5px !important;
+	} */

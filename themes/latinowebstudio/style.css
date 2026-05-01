@@ -1,0 +1,48 @@
+/* 
+
+Theme Name: Latino Web Studio
+Author: Tadeo Martinez
+Author URI: https://latinowebstudio.com/
+Description: Responsive and user-friendly WordPress theme is designed to provide your website visitors with the best possible user experience, no matter what device they are using. With a modern and clean design, intuitive navigation, and easy-to-use features, this theme is perfect for anyone looking to create a website that is both functional and visually appealing.
+Version: 1.0
+
+*/
+
+:root {
+  --accent-primary-lighter: #5AB6F9;
+--accent-primary: #bd9231; /* logo gold */
+--accent-primary-rgba: 189, 146, 49;
+--accent-secondary: #ffffff; /* white */
+--accent-secondary-rgba: 255, 255, 255;
+--accent-tertiary: #86551e; /* warm brown */
+--accent-tertiary-rgba: 134, 85, 30;
+
+
+  --accent-primary-darker: #0E7AC6;
+  --accent-primary-darker-rgba: 14, 122, 198;
+  --accent-primary-hover: #439D8D;
+  --accent-secondary-hover: #CA8E02;
+  --light: #e4e4e4;
+  --light-secondary: #e8edec;
+  --text-shadow: 1px 1px 3px black;
+  --small: 80%;
+}
+
+.logged-in header.position-fixed {
+    margin-top: 32px;
+}
+
+@media only screen and (max-width:767px) {
+    .logged-in header.position-fixed {
+        margin-top: 45px;
+    }
+}
+
+.wp-block-create-block-content-features svg {
+    min-width: 35px !important;
+    min-height: 25px !important;
+}
+.row-checkmarks svg {
+	min-width: 10px !important;
+    min-height: 10px !important;
+}

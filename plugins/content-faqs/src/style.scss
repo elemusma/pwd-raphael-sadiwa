@@ -1,0 +1,62 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+$apply_bold_font: true; // Define a variable to control whether to apply bold font or not
+
+// .accordion {
+//     // margin: 9px 0;
+//     cursor: pointer;
+
+//     @if $apply_bold_font {
+//         span {
+//             // font-weight: bold;
+//             font-family: 'poppinsbold';
+//             color:black;
+//         }
+//     }
+//     &.open {
+//         .chevron {
+//             // Apply styles for .chevron when .accordion has the class 'open'
+//             // Example:
+//             transform: rotate(90deg);
+//             // Add other styles as needed
+//         }
+//     }
+//     // &:not(.open) {
+//         .chevron {
+//             width: 7px;
+//             right: 5px;
+//             // top: 5px;
+//             transform-origin: left;
+//             transition: all .25s ease-in-out;
+//         }
+//         // }
+//         .accordion-content {
+//             height: 0;
+//             /* opacity: 0; */
+//             /* margin: 0 !important; */
+//             overflow: hidden;
+//             pointer-events: none;
+//             transition: all .5s ease;
+//         }
+
+//         &:first-child {
+//             padding: 0px 0px 25px;
+//             // Apply padding 0px to the first accordion
+//             .chevron {
+//                 top:5px;
+//             }
+//           }
+          
+//           &:not(:first-child) {
+//             padding: 25px 0px;
+//             // Apply padding 25px top and bottom to all accordions except the first one
+//             .chevron {
+//                 top:25px;
+//             }
+//           }
+// }
