@@ -1,8 +1,8 @@
 /* 
 
-Theme Name: Latino Web Studio
-Author: Tadeo Martinez
-Author URI: https://latinowebstudio.com/
+Theme Name: Precise Wolf Digital
+Author: Ted Martinez
+Author URI: https://www.precisewolf.com/
 Description: Responsive and user-friendly WordPress theme is designed to provide your website visitors with the best possible user experience, no matter what device they are using. With a modern and clean design, intuitive navigation, and easy-to-use features, this theme is perfect for anyone looking to create a website that is both functional and visually appealing.
 Version: 1.0
 
@@ -10,12 +10,12 @@ Version: 1.0
 
 :root {
   --accent-primary-lighter: #5AB6F9;
---accent-primary: #bd9231; /* logo gold */
---accent-primary-rgba: 189, 146, 49;
---accent-secondary: #ffffff; /* white */
---accent-secondary-rgba: 255, 255, 255;
---accent-tertiary: #86551e; /* warm brown */
---accent-tertiary-rgba: 134, 85, 30;
+--accent-primary: #574c45; /* logo gold */
+--accent-primary-rgba: 87, 76, 69;
+--accent-secondary: #161413; /* white */
+--accent-secondary-rgba: 22, 20, 19;
+--accent-tertiary: #d1b6a3; /* warm brown */
+--accent-tertiary-rgba: 209, 182, 163;
 
 
   --accent-primary-darker: #0E7AC6;
