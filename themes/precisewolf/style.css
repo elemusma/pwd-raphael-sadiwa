@@ -10,8 +10,9 @@ Version: 1.0
 
 :root {
   --accent-primary-lighter: #5AB6F9;
---accent-primary: #574c45; /* logo gold */
---accent-primary-rgba: 87, 76, 69;
+--accent-primary: #d1b6a3;
+/* --accent-primary: #574c45; logo gold */
+--accent-primary-rgba: 209, 182, 163;
 --accent-secondary: #161413; /* white */
 --accent-secondary-rgba: 22, 20, 19;
 --accent-tertiary: #d1b6a3; /* warm brown */

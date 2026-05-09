@@ -51,6 +51,11 @@ a.bg-accent-secondary:hover {
   background: #183034;
   background: linear-gradient(180deg, rgba(0,0,0, 0) 0%, rgba(var(--accent-primary-rgba), 1) 100%);
 }
+.bg-gradient-dark-top-primary-bottom {
+  background: #183034;
+  background: linear-gradient(180deg, rgba(var(--accent-secondary-rgba), 1) 0%, rgba(var(--accent-primary-rgba), 1) 100%);
+}
+
 .bg-gradient-dark-top-light-bottom {
   background: #183034;
   background: linear-gradient(0deg, rgba(var(--accent-tertiary-rgba), 1) 0%, rgba(var(--accent-secondary-rgba), 1) 100%);
