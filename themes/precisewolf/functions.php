@@ -487,21 +487,22 @@ add_filter('category_link', function ($category_link, $category_id) {
 
   function global_cta_block_shortcode() {
     ob_start(); ?>
-    <section class="position-relative bg-accent-secondary" style="padding:0px 0px 150px;" id="apply">
+    <section class="position-relative bg-accent-secondary" style="padding:0px 0px 150px;" id="expert-witness">
   <div class="container">
-    <div class="row justify-content-center br-25" style="padding:35px 25px 0px;background:rgba(0,0,0,.15);border:1px solid black;">
+    <div class="row justify-content-center br-25" style="padding:35px 25px 0px;background:rgba(255,255,255,.5);border:1px solid white;">
       <div class="col-lg-6">
         <?php if(is_page(24)) { ?>
-          <h1 class="h2" style="box-shadow:inset 0 -5px 0 0 var(--accent-primary);display:inline-block;">Get Proper Housing Often Covered by Financial Aid.</h1>
+          <h1 class="h2" style="box-shadow:inset 0 -5px 0 0 var(--accent-primary);display:inline-block;">Get a Life Care Plan That Holds Up in Court</h1>
         <?php } else { ?>
-          <h2 class="" style="box-shadow:inset 0 -5px 0 0 var(--accent-primary);display:inline-block;">Get Proper Housing Often Covered by Financial Aid.</h2>
+          <h2 class="" style="box-shadow:inset 0 -5px 0 0 var(--accent-primary);display:inline-block;">Get a Life Care Plan That Holds Up in Court</h2>
         <?php } ?>
-        <p class="">University-approved, <strong>athlete-dedicated cabin housing</strong> near Caldwell Community College. Covered by your <strong>Pell Grant</strong> at <strong>$3,000 per semester</strong>. <strong>Baseball pods available now.</strong> Get your invitation code from Coach G.</p>
-        <img decoding="async" src="/wp-content/uploads/Cabins-for-College-Student-Athlete-Baseball.png" style="bottom:0;width:125px;height:auto;" class="position-lg-absolute" alt="Coach G - Cabins for College Athlete Housing North Carolina" title="Coach G - Cabins for College Athlete Housing North Carolina">
+        <p class="">Dr. Raphael reviews your case, documents every future cost your client will face. Explained in a way that juries understands. Dr. Raphael delivers a report built to survive cross-examination. Available nationwide. Call, text, or email to discuss your case.</p>
+        <img decoding="async" src="/wp-content/uploads/Raphael-Sadiwa-Based-in-Texas-Certified-Life-Care-Planner-Expert-Witness.png" style="bottom:0;width:125px;height:auto;" class="position-lg-absolute" alt="Coach G - Cabins for College Athlete Housing North Carolina" title="Coach G - Cabins for College Athlete Housing North Carolina">
       </div>
       <div class="col-lg-6">
         <div class="position-absolute" style="height:75%;width:1px;background:gray;top:50%;transform:translate(0px,-50%);"></div>
         <div style="padding:0px 25px;">
+          <h2 style="font-size:1.75rem;">Facts &amp; Data Juries Understand</h2>
           <?php 
             echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]');
           ?>

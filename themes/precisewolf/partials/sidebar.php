@@ -5,21 +5,8 @@ echo '<div class="col-lg-3 col-12 order-2 sidebar">';
 ?>
 
 <div class="card text-center">
-	<?php 
-	echo wp_get_attachment_image(3012,'full','',array(
-    'class'=>'w-100',
-    'style'=>'height:100%;object-fit:cover;'
-));
-	?>
-
-	<?php 
-	// echo do_shortcode('[gravityform id="2" title="false" description="false" ajax="true"]');
-	?>
-</div>
-
-<div class="card text-center">
 <div>
-<?php echo wp_get_attachment_image(254, 'full', false, array(
+<?php echo wp_get_attachment_image(1004, 'full', false, array(
     'class' => '',
     'style' => 'width:100%;aspect-ratio:1/1;height:auto;border-radius:50%;object-fit:cover;object-position:top;box-shadow: 0 0 10px var(--accent-primary);border: 1px solid var(--accent-secondary);'
 )); ?>

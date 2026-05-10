@@ -39,7 +39,7 @@ img.img-si {
 
 .img-backsplash:before {
     content: "";
-    background: var(--accent-primary);
+    background: var(--accent-secondary);
     position: absolute;
     border-radius: 8px;
     width: 90%;

@@ -25,15 +25,29 @@
     text-decoration: none;
 }
 
-.bg-accent .btn-main {
+.bg-accent .btn-main,
+.inverted .btn-main {
     background: black;
     color: white!important;
-    border:1px solid var(--accent-tertiary);
+    border:1px solid white;
 }
-.bg-accent .btn-main:hover {
-    background: var(--accent-secondary);
+.bg-accent .btn-main:hover,
+.inverted .btn-main:hover {
+    background: white;
     color: black!important;
-    border:1px solid var(--accent-tertiary);
+    border:1px solid black;
+}
+
+.bg-accent .text-link,
+.inverted .text-link {
+    box-shadow: inset 0 -5px 0 0 black;
+}
+
+.bg-accent .text-link:hover, 
+.inverted .text-link:hover 
+{
+    box-shadow: inset 0 -55px 0 0 black;
+    color:white !important;
 }
 
 .btn-main.white, .btn-main.white a {

@@ -59,21 +59,12 @@ echo '<p class="">' . companyAbout() . '</p>';
 
 <?php
 echo '<div class="col-lg-3 col-md-6">';
-echo '<p class="h3" style="margin-bottom:0px;"><strong>Services</strong></p>';
+echo '<p class="h3" style="margin-bottom:0px;"><strong>Contact</strong></p>';
 echo wp_get_attachment_image(3009, 'full', false, array(
     'style'=>'width:150px;height:auto;object-fit:contain;border-radius:25px;'));
 
-wp_nav_menu(array(
-    'menu' => 'Services',
-    'menu_class'=>'menu list-unstyled mb-0'
-));
-
-echo '</div>'; // end of second column
-echo '<div class="col-lg-3 col-md-6">';
-echo '<p class="h3" style="margin-bottom:0px;"><strong>Contact</strong></p>';
-
-?>
-<div class="d-flex" style="margin-top:1em;">
+    ?>
+    <div class="d-flex" style="margin-top:1em;">
 <div>
 <?php 
 echo wp_get_attachment_image(3010, 'full', false, array(
@@ -95,6 +86,34 @@ echo wp_get_attachment_image(3011, 'full', false, array(
     <p class="" style="margin:0px;"><strong>Email:</strong><br><a href="mailto:<?php echo emailAddress(); ?>" title="email address link for <?php echo get_bloginfo('name'); ?> - <?php echo get_bloginfo('description'); ?>" class=""><?php echo emailAddress(); ?></a></p>
 </div>
 </div>
+
+<p style="margin-bottom:0;"><strong>Address</strong></p>
+<p style="margin-top:0;">1846 N Loop 1604 W Suite 205, San Antonio, TX 78248</p>
+
+<?php
+// wp_nav_menu(array(
+//     'menu' => 'Contact Info',
+//     'menu_class'=>'menu list-unstyled mb-0'
+// ));
+
+echo '</div>'; // end of second column
+echo '<div class="col-lg-3 col-md-6">';
+echo '<p class="h3" style="margin-bottom:0px;"><strong>Blog</strong></p>';
+
+$recentBlog = new WP_Query(array(
+'posts_per_page' => 5,
+'post_type' => 'post',
+'post__not_in' => [get_the_ID()],
+));
+echo '<ul class="list-unstyled menu">';
+while($recentBlog->have_posts()){
+$recentBlog->the_post();
+echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+} wp_reset_postdata();
+echo '</ul>';
+
+?>
+
 
 <?php
 echo '</div>'; // end of third column
@@ -130,13 +149,13 @@ echo '</div>'; // end of third column
 ?>
 
 <!-- start of backlink -->
-<div class="col-12 text-center text-white" style="padding-top:100px;">
-  <p style="margin-bottom:0px;" class="lead">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All Rights Reserved.</p>
+<div class="col-12 text-center" style="padding-top:100px;">
+  <p style="margin-bottom:0px;" class="lead">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>. All Rights Reserved.</p>
 
 </div>
 
 <div class="col-12">
-    <hr style="margin:20px auto !important;border-color:#f7f7f7;">
+    <hr style="margin:20px auto !important;border-color:black;">
 </div>
 
 <div class="col-md-12 col-11 text-center" style="height:45px;">

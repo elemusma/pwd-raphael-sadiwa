@@ -8,13 +8,14 @@
     margin-bottom: 10px;
     position:relative;
     border-radius: 45px;
-    /* color:white; */
+    color:white;
 }
 
 /* span inside accordion (from @if block) */
 .accordion span {
     font-family: 'poppinsbold';
-    /* color: white; */
+    color: white;
+    font-size: 19px;
 }
 
 /* chevron when accordion is open */
