@@ -1,11 +1,12 @@
 .si svg {
-    height:15px;
+    height:25px;
     width: auto;
 }
 .svg-icon {
     border: 1px solid black;
-    height:40px;
-    width:40px;
+    background:var(--accent-primary);
+    height:50px;
+    width:50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,8 +17,8 @@
     transition:all .25s ease-in-out;
 }
 a:hover .svg-icon {
-    background:var(--accent-primary);
-    border-color:var(--accent-primary);
+    background:var(--accent-secondary);
+    border-color:var(--accent-secondary);
 }
 a:hover .svg-icon path {
     fill: white;

@@ -2,8 +2,8 @@
 Contributors: gravityview
 Tags: gravity forms, spam, captcha, honeypot, anti-spam
 Requires at least: 4.7
-Tested up to: 6.9.1
-Stable tag: 1.7.1
+Tested up to: 6.9.4
+Stable tag: 1.8.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -109,6 +109,31 @@ First, **de-activate and re-activate the plugin**. Then let us know on the suppo
 You can enable a spam summary report email. This email will be sent to the email address configured in the "Spam Summary Email" setting on the Gravity Forms "Forms" menu, click Settings, then click the Zero Spam tab.
 
 == Changelog ==
+
+= 1.8.0 on April 16, 2026 =
+
+* Added: Translations in 27 languages
+* Fixed: Spam report emails could fail to send when the feature was first enabled
+
+= 1.7.5 on April 9, 2026 =
+
+* Fixed: Forms rendered in modals or other elements output via `wp_footer` (e.g., site-wide popups, slide-ins) were missing the spam prevention token, causing legitimate submissions to be flagged as spam
+
+= 1.7.4 on April 2, 2026 =
+
+* Added: "Anti-Spam Expiration" setting to control how long spam prevention tokens remain valid, accessible from Forms > Settings > Zero Spam
+* Fixed: Email rejection settings and form editor scripts not loading when Gravity Forms No Conflict mode is enabled
+* Fixed: Form submission failure ("Cannot read properties of undefined") caused by the token fetch request failing unexpectedly
+
+= 1.7.3 on March 24, 2026 =
+
+* Improved: Extended token lifetime to 7 days and improved token fetching compatibility
+* Fixed: Submissions from pages with multiple Gravity Forms were incorrectly marked as spam when the form wasn't the first one on the page
+* Added: `gf_zero_spam_token_ttl` and `gf_zero_spam_fallback_token_ttl` filters to adjust the lifetime of dynamically fetched and HTML-embedded fallback tokens respectively (default for both: 7 days)
+
+= 1.7.2 on March 12, 2026 =
+
+* Fixed: Forms with conditional logic could be invisible to visitors
 
 = 1.7.1 on March 6, 2026 =
 

@@ -32,24 +32,45 @@ echo '<a href="' . home_url() . '" title="Homepage link for ' . get_bloginfo('na
 echo '<div style="width:90%;min-width:250px;fill:white;" id="logoMain">';
 echo '<div style="pointer-events:none;">';
 
-                  if (logoImg()) {
+if (logoImg()) {
 echo wp_get_attachment_image(logoImg()['id'], 'full','',array(
-	'class'=>'w-100 h-auto skip-lazy',
-	'style'=>''
+'class'=>'w-100 h-auto skip-lazy',
+'style'=>''
 ));
-                  } else {
-                    echo logoSVG(); 
-                    }
+} else {
+echo logoSVG();
+}
 
 echo '</div>';
 echo '</div>';
 echo '</a>';
 
 echo '<p class="">' . companyAbout() . '</p>';
-
 ?>
 
+<div class="d-flex">
 
+
+<div>
+<a href="https://www.roundtablegroup.com/" target="_blank" rel="noopener nofollow external" title="Rountable Group link" style="display:inline-block;" class="">
+<?php
+
+echo wp_get_attachment_image(1121, 'full','',array(
+    'class'=>'',
+    'style'=>'height:52px;width:auto;object-fit:contain;    margin-bottom:-10px;'
+    ));
+    
+    ?>
+</a>
+</div>
+
+<div>
+<?php
+echo get_template_part('partials/si');
+?>
+</div>
+
+</div>
 
 
 
@@ -101,7 +122,7 @@ echo '<div class="col-lg-3 col-md-6">';
 echo '<p class="h3" style="margin-bottom:0px;"><strong>Blog</strong></p>';
 
 $recentBlog = new WP_Query(array(
-'posts_per_page' => 5,
+'posts_per_page' => 4,
 'post_type' => 'post',
 'post__not_in' => [get_the_ID()],
 ));
@@ -345,7 +366,7 @@ g.site-created-text {
 <div id="mobileMenu" class="modal-custom mobile-menu" style="opacity:0;pointer-events:none;">
 
 <!-- Modal content -->
-<div class="modal-content-menu modal-content-custom bg-accent-secondary" style="padding: 100px 15px;
+<div class="modal-content-menu modal-content-custom bg-white" style="padding: 50px 15px 100px;
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 0;
@@ -353,15 +374,22 @@ g.site-created-text {
     border-bottom: 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    height: 100vh;
-	background: var(--accent-secondary);">
+    height: 100vh;">
 <span class="close-custom" id="navMenuClose">&times;</span>
 	<?php
 
 echo '<div style="width:100%;max-width:165px;" id="logoMain">';
 echo '<a href="' . home_url() . '" title="Homepage link for ' . get_bloginfo('name') . ' - ' . get_bloginfo('description') . '">';
 
-echo logoSVG();
+if (logoImg()) {
+echo wp_get_attachment_image(logoImg()['id'], 'full','',array(
+'class'=>'w-100 h-auto skip-lazy',
+'style'=>''
+));
+} else {
+echo logoSVG(); 
+}
+
 echo '</a>';
 echo '</div>';
 
@@ -373,9 +401,15 @@ wp_nav_menu(array(
 ?>
 <div class="">
 <?php
-echo do_shortcode('[discovery_engineering_contact]');
+echo do_shortcode('[global_cta]');
 ?>
 </div>
+
+<?php
+
+echo get_template_part('partials/si');
+
+?>
 
 <?php
 echo '</div>';

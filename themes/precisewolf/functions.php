@@ -2,6 +2,7 @@
 
 include_once get_theme_file_path('/codestarframework/codestarframework.php');
 include_once get_theme_file_path('/gravityforms/gravityforms.php');
+require_once get_stylesheet_directory() . '/spam-filter/spam-filter.php';
 
 function dr_raphael_stylesheets() {
 wp_enqueue_style('style', get_stylesheet_uri() );
@@ -42,7 +43,7 @@ wp_enqueue_style('blog', get_theme_file_uri('/css/sections/blog.css'));
 wp_enqueue_style('gutenberg-custom', get_theme_file_uri('/css/sections/gutenberg.css'));
 
 // wp_enqueue_style('sidebar', get_theme_file_uri('/css/sections/sidebar.css'));
-// wp_enqueue_style('social-icons', get_theme_file_uri('/css/sections/social-icons.css'));
+wp_enqueue_style('social-icons', get_theme_file_uri('/css/sections/social-icons.css'));
 
 }
 add_action('wp_enqueue_scripts', 'dr_raphael_stylesheets');
@@ -492,12 +493,12 @@ add_filter('category_link', function ($category_link, $category_id) {
     <div class="row justify-content-center br-25" style="padding:35px 25px 0px;background:rgba(255,255,255,.5);border:1px solid white;">
       <div class="col-lg-6">
         <?php if(is_page(24)) { ?>
-          <h1 class="h2" style="box-shadow:inset 0 -5px 0 0 var(--accent-primary);display:inline-block;">Get a Life Care Plan That Holds Up in Court</h1>
+          <h1 class="h2" style="box-shadow:inset 0 -5px 0 0 var(--accent-primary);display:inline-block;">Get a Life Care Plan That's Admissible in Court</h1>
         <?php } else { ?>
-          <h2 class="" style="box-shadow:inset 0 -5px 0 0 var(--accent-primary);display:inline-block;">Get a Life Care Plan That Holds Up in Court</h2>
+          <h2 class="" style="box-shadow:inset 0 -5px 0 0 var(--accent-primary);display:inline-block;">Get a Life Care Plan That's Admissible in Court</h2>
         <?php } ?>
         <p class="">Dr. Raphael reviews your case, documents every future cost your client will face. Explained in a way that juries understands. Dr. Raphael delivers a report built to survive cross-examination. Available nationwide. Call, text, or email to discuss your case.</p>
-        <img decoding="async" src="/wp-content/uploads/Raphael-Sadiwa-Based-in-Texas-Certified-Life-Care-Planner-Expert-Witness.png" style="bottom:0;width:125px;height:auto;" class="position-lg-absolute" alt="Coach G - Cabins for College Athlete Housing North Carolina" title="Coach G - Cabins for College Athlete Housing North Carolina">
+        <img decoding="async" src="/wp-content/uploads/Raphael-Sadiwa-Based-in-Texas-Certified-Life-Care-Planner-Expert-Witness.png" style="bottom:0;width:125px;height:auto;" class="position-lg-absolute" alt="Dr-Raphael-Sadiwa-Life-Care-Planner-Physical-Therapy-Expert-Witness" title="Dr-Raphael-Sadiwa-Life-Care-Planner-Physical-Therapy-Expert-Witness">
       </div>
       <div class="col-lg-6">
         <div class="position-absolute" style="height:75%;width:1px;background:gray;top:50%;transform:translate(0px,-50%);"></div>

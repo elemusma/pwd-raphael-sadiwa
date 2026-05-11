@@ -11,7 +11,7 @@ function change_gf_submit_button_text_with_expert_name($button, $form) {
 
     return preg_replace(
         '/value=(["\']).*?\1/',
-        'value="Send ' . esc_attr($expert_name) . ' Message"',
+        'value="Send ' . esc_attr($expert_name) . ' a Message"',
         $button,
         1
     );
